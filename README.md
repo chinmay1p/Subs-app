@@ -5,22 +5,25 @@ The service should allow users to subscribe to various plans, manage their subsc
 
 ---
 
-## 🧠 Key Components (Agents)
+## 🧠 Key Components
 
 1. User Subscription Management:
-○ Create a Subscription: Users can subscribe to a plan by providing their user
+
+- Create a Subscription: Users can subscribe to a plan by providing their user
 ID and plan details.
-○ Retrieve Subscription: Retrieve the details of a user's current subscription.
-○ Update Subscription: Allow users to upgrade or downgrade their
+- Retrieve Subscription: Retrieve the details of a user's current subscription.
+- Update Subscription: Allow users to upgrade or downgrade their
 subscription plan.
-○ Cancel Subscription: Allow users to cancel their subscription.
+- Cancel Subscription: Allow users to cancel their subscription.
+  
 2. Plan Management:
-○ Define subscription plans with fields like id, name, price, features, and
+- Define subscription plans with fields like id, name, price, features, and
 duration.
-○ Allow retrieval of all available plans.
+- Allow retrieval of all available plans.
+  
 3. Subscription Status:
-○ Handle subscription statuses (ACTIVE, INACTIVE, CANCELLED, EXPIRED).
-○ Automatically expire subscriptions after their duration has passed.
+- Handle subscription statuses (ACTIVE, INACTIVE, CANCELLED, EXPIRED).
+- Automatically expire subscriptions after their duration has passed.
 
 ---
 
@@ -36,24 +39,25 @@ duration.
    ``` bash
    git clone https://github.com/chinmay1p/subs-app.git
    ```
-2. Open the terminal
-3. Start a python virtual environment using -
+2. Create a .env file and add your MONGO_URI and JWT_KEY
+3. Open the terminal
+4. Start a python virtual environment using -
    ```
    python -m venv .venv
    ```
-4. Run -
+5. Run -
    ```
    .venv\Scripts\activate
    ```
-5.Install dependencies -
+6.Install dependencies -
    ``` 
   pip install flask pymongo python-dotenv pyjwt
    ```
-6. Enter -
+7. Enter -
    ```
    python app.py
    ```
-7. Test using REST client extension in Vsc using test.http or Postman
+8. Test using REST client extension in VSC using test.http or Postman
 
 ---
 
