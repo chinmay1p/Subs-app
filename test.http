@@ -1,0 +1,34 @@
+### Get All Plans
+GET http://127.0.0.1:5000/plans
+
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJ1MDAxIn0.UXiv_fB2mypc0Vvi7kCju_X2paPfnotrCPdFwWImoKo
+
+
+### Create Subscription
+POST http://127.0.0.1:5000/subscriptions
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "pid": "basic"
+}
+
+
+### Get User Subscription
+GET http://127.0.0.1:5000/subscriptions/u001
+Authorization: {{token}}
+
+
+### Update Subscription
+PUT http://127.0.0.1:5000/subscriptions/u001
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "pid": "pro"
+}
+
+
+### Cancel Subscription
+DELETE http://127.0.0.1:5000/subscriptions/u001
+Authorization: {{token}}
